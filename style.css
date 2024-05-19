@@ -5,6 +5,9 @@
 	line-height: 1.5;
 	font-weight: 400;
 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #662cba;
@@ -12,14 +15,16 @@
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+
 	-moz-osx-font-smoothing: grayscale;
 }
+
 ul {
 	list-style: none;
 }
 a {
 	font-weight: 500;
-	color: #646cff;
+	color: #868cf9;
 	text-decoration: inherit;
 	transition: 0s;
 }
@@ -92,7 +97,6 @@ button:focus-visible {
 .container {
 	position: relative;
 	display: flex;
-	flex-direction: row;
 
 	width: 100%;
 	max-width: 1000px;
@@ -100,7 +104,7 @@ button:focus-visible {
 	margin: 50px;
 	background: whitesmoke;
 	border: 1px transparent;
-	border-radius: 10%;
+
 	box-shadow: 10px 35px 40px 5px rgb(32, 38, 57);
 }
 
@@ -110,7 +114,6 @@ button:focus-visible {
 	padding: 50px;
 	width: 200px;
 	border: 1px transparent;
-	border-radius: 10%;
 }
 
 .profile-title {
@@ -133,6 +136,38 @@ button:focus-visible {
 	background: whitesmoke;
 }
 
+.profile-contact-info {
+	padding-top: 35px;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.contact-info {
+	position: relative;
+	padding-left: 0;
+	gap: 50px;
+}
+
+.contact-item {
+	display: flex;
+	align-items: center;
+	line-height: 1.16;
+	font-size: 16px;
+	position: relative;
+	margin: 20px 0;
+	cursor: pointer;
+	gap: 20px;
+	padding-left: 5px;
+}
+
+.contact-item {
+	gap: 10px;
+}
+
+.contact-text {
+	font-weight: 300px;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		color: #213547;
@@ -143,5 +178,33 @@ button:focus-visible {
 	}
 	button {
 		background-color: #f9f9f9;
+	}
+}
+
+@media (max-width: 1000px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container .left-side {
+		display: flex;
+		flex-direction: column;
+		width: calc(100% - 100px);
+	}
+
+	.left-side,
+	.profile-contact-info,
+	.profile-title,
+	span {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	span {
+		white-space: nowrap;
 	}
 }
