@@ -19,6 +19,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+span {
+	white-space: nowrap;
+}
+
 ul {
 	list-style: none;
 }
@@ -116,6 +120,11 @@ button:focus-visible {
 	border: 1px transparent;
 }
 
+.profile-photo {
+	border: transparent;
+	border-radius: 50%;
+}
+
 .profile-title {
 	position: relative;
 	display: flex;
@@ -123,6 +132,8 @@ button:focus-visible {
 	align-items: center;
 	padding-top: 28px;
 	border-bottom: 1px solid white;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 .profile-title h2 span {
@@ -139,7 +150,7 @@ button:focus-visible {
 .contact-info {
 	position: relative;
 	padding-left: 0;
-	gap: 50px;
+	padding-top: 10px;
 }
 
 .contact-item {
@@ -155,7 +166,7 @@ button:focus-visible {
 }
 
 .contact-item {
-	gap: 10px;
+	gap: 5px;
 }
 
 .contact-text {
@@ -171,7 +182,7 @@ button:focus-visible {
 .languages-info {
 	position: relative;
 	padding-left: 0;
-	gap: 50px;
+	padding-top: 5px;
 }
 
 .language-item {
@@ -188,9 +199,6 @@ button:focus-visible {
 }
 
 .lang-text {
-	text-align: left;
-	align-items: left;
-	justify-content: left;
 }
 
 .percent {
@@ -217,7 +225,42 @@ button:focus-visible {
 	background: rgb(240, 236, 236);
 	color: #333333;
 }
+.profile-prologue {
+	padding-top: 30px;
+}
 
+.profile-education {
+	padding-top: 30px;
+}
+
+.profile-work-experience {
+	padding-top: 30px;
+}
+.profile-education ul {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+}
+
+.profile-work-experience ul {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+}
+
+.profile-skills {
+	padding-top: 30px;
+}
+
+.profile-skills ul {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+}
+
+.profile-education li {
+	column-gap: 4px;
+}
 @media (prefers-color-scheme: light) {
 	:root {
 		color: #213547;
@@ -235,6 +278,8 @@ button:focus-visible {
 	.container {
 		display: flex;
 		flex-direction: column;
+		text-align: center;
+		align-items: center;
 	}
 
 	.container .left-side {
@@ -256,5 +301,17 @@ button:focus-visible {
 
 	span {
 		white-space: nowrap;
+	}
+
+	.profile-prologue {
+		padding-top: 40px;
+	}
+
+	.profile-education {
+		padding-top: 40px;
+	}
+
+	.profile-work-experience {
+		padding-top: 40px;
 	}
 }
